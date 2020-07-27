@@ -145,7 +145,7 @@ In Unity import the Magic Leap package from the project template you just donwlo
 
 Next go to **Edit->Project Settings**, click on **XR Settings** and click on **Install Legacy Input Helpers Package** as shown above.
 
-![Albedo](../Media/Images/plugin-providers.png)
+![Plugin Providers](../Media/Images/plugin-providers.png)
 
 Now you need to set the plugin providers for both Windows and Magic Leap. Go to **Project Settings->XR Plugin Management** and click on the **+** sign in **Plugin Providers** in both the Windows and Magic Leap tabs and add **Magic Leap Loader**.
 
