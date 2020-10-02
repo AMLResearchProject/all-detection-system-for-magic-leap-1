@@ -22,6 +22,7 @@
   - [Zero Iteration](#zero-iteration)
   - [Classification Server](#classification-server)
   - [Run The App](#run-the-app)
+  - [Data](#data)
 - [Contributing](#contributing)
   - [Contributors](#contributors)
 - [Versioning](#versioning)
@@ -32,17 +33,17 @@
 
 # Introduction
 
-The Acute Lymphoblastic Leukemia Detection System For Magic Leap 1 2020 uses Tensorflow 2, Raspberry Pi 4 & Magic Leap 1 to provide a Spatial Computing detection system for Acute Lymphoblastic Leukemia. 
+The Acute Lymphoblastic Leukemia Detection System For Magic Leap 1 2020 uses Tensorflow 2, Raspberry Pi 4 & Magic Leap 1 to provide a Spatial Computing detection system for Acute Lymphoblastic Leukemia.
 
-The project uses the [Acute Lymphoblastic Leukemia Tensorflow CNN](https://github.com/AMLResearchProject/ALL-Tensorflow-2020/tree/master/CNN "Acute Lymphoblastic Leukemia Tensorflow CNN") a Tensorflow implementation of DenseNet and the [Acute Lymphoblastic Leukemia Image Database for Image Processing dataset](https://homes.di.unimi.it/scotti/all "Acute Lymphoblastic Leukemia Image Database for Image Processing dataset").
+The project uses the [OneAPI OpenVINO Raspberry Pi 4 Acute Lymphoblastic Leukemia Classifier](https://github.com/AMLResearchProject/oneAPI-ALL-Classifier/tree/master/RPI4 "OneAPI OpenVINO Raspberry Pi 4 Acute Lymphoblastic Leukemia Classifier") a Tensorflow classifier using the [Acute Lymphoblastic Leukemia Image Database for Image Processing dataset](https://homes.di.unimi.it/scotti/all "Acute Lymphoblastic Leukemia Image Database for Image Processing dataset").
 
-We use the trained model from **Acute Lymphoblastic Leukemia Tensorflow CNN** with the [Acute Lymphoblastic Leukemia Tensorflow CNN For Raspberry Pi 4](https://github.com/AMLResearchProject/ALL-Tensorflow-2020/tree/master/RPI4 "Acute Lymphoblastic Leukemia Tensorflow CNN For Raspberry Pi 4") and serve an API endpoint that exposes the Artificial Intelligence classifier allowing **Magic Leap 1** to communicate with it.
+We use the trained model from **oneAPI Acute Lymphoblastic Leukemia Classifier** with the [OneAPI OpenVINO Raspberry Pi 4 Acute Lymphoblastic Leukemia Classifier](https://github.com/AMLResearchProject/oneAPI-ALL-Classifier/tree/master/RPI4 "OneAPI OpenVINO Raspberry Pi 4 Acute Lymphoblastic Leukemia Classifier") and serve an API endpoint that exposes the Artificial Intelligence classifier allowing **Magic Leap 1** to communicate with it.
 
 &nbsp;
 
 # DISCLAIMER
 
-This project should be used for research purposes only. The purpose of the project is to show the potential of Spatial Computing, Artificial Intelligence, and the Internet of Things for medical support systems such as diagnosis systems. 
+This project should be used for research purposes only. The purpose of the project is to show the potential of Spatial Computing, Artificial Intelligence, and the Internet of Things for medical support systems such as diagnosis systems.
 
 Although the classifier used in this project is very accurate and shows good results both on paper and in real world testing, it is not meant to be an alternative to professional medical diagnosis.
 
@@ -52,13 +53,13 @@ Developers that have contributed to this repository have experience in using Art
 
 # Prerequisites
 
-Before you can install the Acute Lymphoblastic Leukemia Detection System For Magic Leap 1, there are some prerequisites. 
+Before you can install the Acute Lymphoblastic Leukemia Detection System For Magic Leap 1, there are some prerequisites.
 
 ## HIAS Server
 
-If you are going to be using the full system you will need to install the [HIAS](https://github.com/LeukemiaAiResearch/HIAS "HIAS") server. Follow the [HIAS Installation Guide](https://github.com/LeukemiaAiResearch/HIAS/blob/master/Documentation/Installation/Installation.md "HIAS Installation Guide") to complete your HIAS server setup. 
+If you are going to be using the full system you will need to install the [HIAS](https://github.com/LeukemiaAiResearch/HIAS "HIAS") server. Follow the [HIAS Installation Guide](https://github.com/LeukemiaAiResearch/HIAS/blob/master/Documentation/Installation/Installation.md "HIAS Installation Guide") to complete your HIAS server setup.
 
-If you chose not to use the full system, steps are provided in this tutorial that will allow you to use the system without a HIAS installation. 
+If you chose not to use the full system, steps are provided in this tutorial that will allow you to use the system without a HIAS installation.
 
 ## ALL-IDB
 
@@ -68,14 +69,14 @@ You need to be granted access to use the Acute Lymphoblastic Leukemia Image Data
 
 If you want to train your own Artificial Intelligence required to detect COVID-19, you will need to complete the [Acute Lymphoblastic Leukemia Tensorflow CNN](https://github.com/AMLResearchProject/ALL-Tensorflow-2020/tree/master/CNN) tutorial. If you would like to use the pre-trained model we have provided, you can skip to the next step.
 
-**YOU MUST USE THE SAME TRAIN AND TEST DATA AS THE TUTORIAL SPECIFIES**  
-The test data provided in the Acute Lymphoblastic Leukemia Detection System For Magic Leap 1 requires the same model to be used. 
+**YOU MUST USE THE SAME TRAIN AND TEST DATA AS THE TUTORIAL SPECIFIES**
+The test data provided in the Acute Lymphoblastic Leukemia Detection System For Magic Leap 1 requires the same model to be used.
 
 ## Acute Lymphoblastic Leukemia Tensorflow CNN For Raspberry Pi 4
 
-The Acute Lymphoblastic Leukemia Tensorflow CNN For Raspberry Pi 4 hosts a local server on a RPI4 allowing images to be classified remotely. In this project we use the AI model trained in the **Acute Lymphoblastic Leukemia Tensorflow CNN**, but we also provide the pre-trained model so that you can use the classifier "out of the box". 
+The Acute Lymphoblastic Leukemia Tensorflow CNN For Raspberry Pi 4 hosts a local server on a RPI4 allowing images to be classified remotely. In this project we use the AI model trained in the **Acute Lymphoblastic Leukemia Tensorflow CNN**, but we also provide the pre-trained model so that you can use the classifier "out of the box".
 
-Regardless of whether you choose to train your own model or use the pre-trained model, you will need to complete the [Acute Lymphoblastic Leukemia Tensorflow CNN For Raspberry Pi 4](https://github.com/AMLResearchProject/ALL-Tensorflow-2020/tree/master/RPI4) tutorial as this is the project that creates the classifier that the Magic Leap 1 will interact with. 
+Regardless of whether you choose to train your own model or use the pre-trained model, you will need to complete the [Acute Lymphoblastic Leukemia Tensorflow CNN For Raspberry Pi 4](https://github.com/AMLResearchProject/ALL-Tensorflow-2020/tree/master/RPI4) tutorial as this is the project that creates the classifier that the Magic Leap 1 will interact with.
 
 &nbsp;
 
@@ -97,7 +98,7 @@ Open **Magic Leap's Lab** and click on the **Launch** button for **Unity Hub**.
 
 [![Acute Lymphoblastic Leukemia Detection System For Magic Leap 1](Media/Images/magic-leap-lab.png)](https://developer.magicleap.com/en-us/learn/guides/lab)
 
-Once you have done this you can open the project in Unity by clicking on it. 
+Once you have done this you can open the project in Unity by clicking on it.
 
 ![Import Project To Unity Hub](Media/Images/unity-view.png)
 
@@ -107,7 +108,7 @@ Once you have done this you can open the project in Unity by clicking on it.
 
 Now you need to setup your Magic Leap 1 device in [Device Bridge](https://developer.magicleap.com/en-us/learn/guides/magic-leap-device-bridge-reference "Device Bridge"). To do this first turn on your Magic Leap device and open your world. Make sure you are in the center of your room and facing the way you want your app to open.
 
-Once turned on and inside your world, you need to attach your Magic Leap 1 to your computer using the USB type C  connector. 
+Once turned on and inside your world, you need to attach your Magic Leap 1 to your computer using the USB type C  connector.
 
 Now head to Device Bridge in Lab. You should see the above in Device Bridge.
 
@@ -117,7 +118,7 @@ Click on the **WiFi Bridge** button to activate WiFi, Device Bridge will reload 
 
 ![Zero Iteration](Media/Images/zero-iteration.png)
 
-[Zero Iteration](https://developer.magicleap.com/en-us/learn/guides/lab-zi "Zero Iteration") allows you to run your apps directly on the Magic Leap 1 device. Providing you have followed the above steps, open Zero Iterator from the Lab homepage, select your device, and restart the program. 
+[Zero Iteration](https://developer.magicleap.com/en-us/learn/guides/lab-zi "Zero Iteration") allows you to run your apps directly on the Magic Leap 1 device. Providing you have followed the above steps, open Zero Iterator from the Lab homepage, select your device, and restart the program.
 
 ## Classification Server
 
@@ -125,15 +126,15 @@ Now you need to make sure that your **Acute Lymphoblastic Leukemia Tensorflow CN
 
 ## Run The App
 
-Now you are ready to fire up the Acute Lymphoblastic Leukemia Detection System For Magic Leap 1! 
+Now you are ready to fire up the Acute Lymphoblastic Leukemia Detection System For Magic Leap 1!
 
-Head over to Unity and click on the play button. You can remove the cable connection and move to the center of your room. You should now see the Acute Lymphoblastic Leukemia Detection System For Magic Leap 1 in your view. 
+Head over to Unity and click on the play button. You can remove the cable connection and move to the center of your room. You should now see the Acute Lymphoblastic Leukemia Detection System For Magic Leap 1 in your view.
 
 ![Acute Lymphoblastic Leukemia Detection System For Magic Leap 1](Media/Images/start.jpg)
 
-Now use your controller to hit the blocks by pointing the laser at the blocks. This will send the relevant image to the server for classification. 
+Now use your controller to hit the blocks by pointing the laser at the blocks. This will send the relevant image to the server for classification.
 
-The server will return the response to the Magic Leap 1 and the color of the block will change. 
+The server will return the response to the Magic Leap 1 and the color of the block will change.
 
 ![Acute Lymphoblastic Leukemia Detection System For Magic Leap 1](Media/Images/hits.jpg)
 
@@ -143,6 +144,16 @@ The server will return the response to the Magic Leap 1 and the color of the blo
 - **Cyan** Specifies a false negative (ALL positive but classifier determined ALL negative)
 
 You can reset the application by hitting the **RESET** button with the laser.
+
+## Data
+
+![HIAS iotJumpWay Data](Media/Images/data-integrity.png)
+
+A record of classifications are stored in the HIAS IoT Database via MQTT. Before the data can be stored in the database, the iotJumpWay service will verify via the HIAS iotJumpWay Blockchain Contract that the device has the permissions to store the data. Once the data is stored, a hash is stored on the blockchain which provides data integrity.
+
+![HIAS iotJumpWay Data](Media/Images/status.png)
+
+A record of each time the device connects and disconnects from the broker is also saved in the database, and a hash on the blockchain for data integrity.
 
 &nbsp;
 

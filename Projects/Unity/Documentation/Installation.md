@@ -12,13 +12,15 @@
 - [Required Hardware](#required-hardware)
 - [Prerequisites](#prerequisites)
   - [HIAS Server](#hias-server)
-  - [Acute Lymphoblastic Leukemia Tensorflow CNN](#acute-lymphoblastic-leukemia-tensorflow-cnn)
-  - [Acute Lymphoblastic Leukemia Tensorflow CNN For Raspberry Pi 4](#acute-lymphoblastic-leukemia-tensorflow-cnn-for-raspberry-pi-4)
+  - [OneAPI Acute Lymphoblastic Leukemia Classifier](#oneapi-acute-lymphoblastic-leukemia-classifier)
+  - [OneAPI OpenVINO Raspberry Pi 4 Acute Lymphoblastic Leukemia Classifier](#oneapi-openvino-raspberry-pi-4-acute-lymphoblastic-leukemia-classifier)
   - [Clone the repository](#clone-the-repository)
     - [Developer Forks](#developer-forks)
 - [Installation](#installation)
     - [Magic Leap Basics](#magic-leap-basics)
     - [Unity 2019.3.4f1](#unity-201934f1)
+    - [Install ALL-IDB 1](#install-all-idb1)
+    - [HIAS iotJumpWay Device](#hias-iotjumpway-device)
     - [Magic Leap 1](#magic-leap-1)
 - [Continue](#continue)
 - [Contributing](#contributing)
@@ -44,26 +46,26 @@ The following guide will take you through setting up and installing the [ Acute 
 
 # Prerequisites
 
-Before you can install the Acute Lymphoblastic Leukemia Detection System For Magic Leap 1, there are some prerequisites. 
+Before you can install the Acute Lymphoblastic Leukemia Detection System For Magic Leap 1, there are some prerequisites.
 
 ## HIAS Server
 
-If you are going to be using the full system you will need to install the [HIAS](https://github.com/LeukemiaAiResearch/HIAS "HIAS") server. Follow the [HIAS Installation Guide](https://github.com/LeukemiaAiResearch/HIAS/blob/master/Documentation/Installation/Installation.md "HIAS Installation Guide") to complete your HIAS server setup. 
+If you are going to be using the full system you will need to install the [HIAS](https://github.com/LeukemiaAiResearch/HIAS "HIAS") server. Follow the [HIAS Installation Guide](https://github.com/LeukemiaAiResearch/HIAS/blob/master/Documentation/Installation/Installation.md "HIAS Installation Guide") to complete your HIAS server setup.
 
 If you chose not to use the full system, steps are provided in this tutorial that will allow you to use the system without a HIAS installation.
 
-## Acute Lymphoblastic Leukemia Tensorflow CNN
+## OneAPI Acute Lymphoblastic Leukemia Classifier
 
-If you want to train your own Artificial Intelligence required to detect COVID-19, you will need to complete the [Acute Lymphoblastic Leukemia Tensorflow CNN](https://github.com/AMLResearchProject/ALL-Tensorflow-2020/tree/master/CNN) tutorial. If you would like to use the pre-trained model we have provided, you can skip to the next step.
+If you want to train your own Artificial Intelligence required to detect COVID-19, you will need to complete the [OneAPI Acute Lymphoblastic Leukemia Classifier](https://github.com/AMLResearchProject/oneAPI-ALL-Classifier/tree/master/CNN) tutorial. If you would like to use the pre-trained model we have provided, you can skip to the next step.
 
-**YOU MUST USE THE SAME TRAIN AND TEST DATA AS THE TUTORIAL SPECIFIES**  
-The test data provided in the Acute Lymphoblastic Leukemia Detection System For Magic Leap 1 requires the same model to be used. 
+**YOU MUST USE THE SAME TRAIN AND TEST DATA AS THE TUTORIAL SPECIFIES**
+The test data provided in the Acute Lymphoblastic Leukemia Detection System For Magic Leap 1 requires the same model to be used.
 
-## Acute Lymphoblastic Leukemia Tensorflow CNN For Raspberry Pi 4
+## OneAPI OpenVINO Raspberry Pi 4 Acute Lymphoblastic Leukemia Classifier
 
-The Acute Lymphoblastic Leukemia Tensorflow CNN For Raspberry Pi 4 hosts a local server on a RPI4 allowing images to be classified remotely. In this project we use the AI model trained in the **Acute Lymphoblastic Leukemia Tensorflow CNN**, but we also provide the pre-trained model so that you can use the classifier "out of the box". 
+The OneAPI OpenVINO Raspberry Pi 4 Acute Lymphoblastic Leukemia Classifier hosts a local server on a RPI4 allowing images to be classified remotely. In this project we use the AI model trained in the **OneAPI Acute Lymphoblastic Leukemia Classifier**, but we also provide the pre-trained model so that you can use the classifier "out of the box".
 
-Regardless of whether you choose to train your own model or use the pre-trained model, you will need to complete the [Acute Lymphoblastic Leukemia Tensorflow CNN For Raspberry Pi 4](https://github.com/AMLResearchProject/ALL-Tensorflow-2020/tree/master/RPI4) tutorial as this is the project that creates the classifier that the Magic Leap 1 will interact with. 
+Regardless of whether you choose to train your own model or use the pre-trained model, you will need to complete the [OneAPI OpenVINO Raspberry Pi 4 Acute Lymphoblastic Leukemia Classifier](https://github.com/AMLResearchProject/oneAPI-ALL-Classifier/tree/master/RPI4) tutorial as this is the project that creates the classifier that the Magic Leap 1 will interact with.
 
 ## Clone the repository
 
@@ -94,10 +96,10 @@ Navigate to **Magic-Leap-1-ALL-Detection-System-2020/Projects/Unity** directory,
 Developers from the Github community that would like to contribute to the development of this project should first create a fork, and clone that repository. For detailed information please view the [CONTRIBUTING](../../../CONTRIBUTING.md "CONTRIBUTING") guide. You should pull the latest code from the development branch.
 
 ```
-  $ git clone -b "0.2.0" https://github.com/AMLResearchProject/Magic-Leap-1-ALL-Detection-System-2020.git
+  $ git clone -b "0.3.0" https://github.com/AMLResearchProject/Magic-Leap-1-ALL-Detection-System-2020.git
 ```
 
-The **-b "0.2.0"** parameter ensures you get the code from the latest master branch. Before using the below command please check our latest master branch in the button at the top of the project README.
+The **-b "0.3.0"** parameter ensures you get the code from the latest master branch. Before using the below command please check our latest master branch in the button at the top of the project README.
 
 &nbsp;
 
@@ -111,13 +113,13 @@ Follow the [Magic Leap Developer Setup](https://developer.magicleap.com/en-us/le
 
 ## Unity 2019.3.4f1
 
-For Magic Leap apps you need Unity 2019.3.4f1. Head to the [Unity 2019.3.4](https://unity3d.com/unity/whats-new/2019.3.4 "Unity 2019.3.4") page and download and install the **Lumin Target Support** exe. 
+For Magic Leap apps you need Unity 2019.3.4f1. Head to the [Unity 2019.3.4](https://unity3d.com/unity/whats-new/2019.3.4 "Unity 2019.3.4") page and download and install the **Lumin Target Support** exe.
 
 Open **Magic Leap's Lab** and click on the **Launch** button for **Unity Hub**.
 
 [![Acute Lymphoblastic Leukemia Detection System For Magic Leap 1](../Media/Images/magic-leap-lab.png)](https://developer.magicleap.com/en-us/learn/guides/lab)
 
-Unity Hub will now open. 
+Unity Hub will now open.
 
 ![Unity Installs](../Media/Images/unity-installs.png)
 
@@ -125,11 +127,11 @@ Go to the **Installs** tab in Unity Hub and select **Unity 2019.3.4f1 (LTS)**, c
 
 ![Import Project To Unity Hub](../Media/Images/unity-hub-add.png)
 
-Click on the **ADD** button. This will open Windows Explorer allowing you to navigate to the project and import it. 
+Click on the **ADD** button. This will open Windows Explorer allowing you to navigate to the project and import it.
 
 To import Acute Lymphoblastic Leukemia Detection System For Magic Leap 1 into Unity Hub, navigate to the **Magic-Leap-1-ALL-Detection-System-2020/Src** directory and click **Select Folder**.
 
-Now open the project by double clicking on it, if you get a warning, click Continue. 
+Now open the project by double clicking on it, if you get a warning, click Continue.
 
 Now follow the [Magic Leap Unity Setup](https://developer.magicleap.com/en-us/learn/guides/get-started-developing-in-unity) guide. When you get to the **Unity Project Setup** skip the rest of the tutorial and follow the steps here below.
 
@@ -151,18 +153,29 @@ Now you need to set the plugin providers for both Windows and Magic Leap. Go to 
 
 Go to **Magic Leap->ML Remote** and click on **Import Support Libraries** then click on **Launch Zero Iteration**.
 
-Next you need to add your Magic Leap certificate. Follow the [Get a Developer Certificate](https://developer.magicleap.com/en-us/learn/guides/developer-certificates "Get a Developer Certificate") guide on Magic Leap's website. 
+Next you need to add your Magic Leap certificate. Follow the [Get a Developer Certificate](https://developer.magicleap.com/en-us/learn/guides/developer-certificates "Get a Developer Certificate") guide on Magic Leap's website.
 
 Once you have your certificate you need to add it to your Unity project. Go to **Edit->Project Settings->Publish Settings** and click **Sign Package** then click the button **...** to open Explorer, navigate to the location you saved your certificate to and select the folder.
 
 ## Install ALL-IDB 1
-Now you need to install the ALL-IDB 1 data into the application. Remember, you must use the same test data that was specified in the [Acute Lymphoblastic Leukemia Tensorflow CNN](https://github.com/AMLResearchProject/ALL-Tensorflow-2020/tree/master/CNN "Acute Lymphoblastic Leukemia Tensorflow CNN") tutorial. 
+Now you need to install the ALL-IDB 1 data into the application. Remember, you must use the same test data that was specified in the [Acute Lymphoblastic Leukemia Tensorflow CNN](https://github.com/AMLResearchProject/ALL-Tensorflow-2020/tree/master/CNN "Acute Lymphoblastic Leukemia Tensorflow CNN") tutorial.
 
 ![Albedo](../Media/Images/albedo.png)
 
-Navigate to the **ALL-IDB** folder in the **Assets** folder in Unity. Now drag the test data into the ALL-IDB folder. Click on each material in the folder and drag the corresponding data file to the square to the left of the **Albedo** setting in the **Inspector** area to the right of the IDE as shown above. 
+Navigate to the **ALL-IDB** folder in the **Assets** folder in Unity. Now drag the test data into the ALL-IDB folder. Click on each material in the folder and drag the corresponding data file to the square to the left of the **Albedo** setting in the **Inspector** area to the right of the IDE as shown above.
 
 Final drag the test data into the **StreamingAssets** folder also.
+
+## HIAS iotJumpWay Device
+![HIAS iotJumpWay](../Media/Images/iotJumpWay-Device-Create.png)
+
+You will need a HIAS iotJumpWay device to run this application. Log in to your HIAS Server UI and navigate to **IoT->Devices** and click on the **+** button to create a new device.
+
+Fill in the details and once you click **Create** you will be provided with the credentials for your iotJumpWay device. Make sure you save the Blockchain password as you will not be able to recover or change them in the future, the other credenitials you will be able to retrieve through the device page and/or reset them.
+
+![Visual Studio](../Media/Images/visual-studio.png)
+
+Once you have your credentials, navigate to **Assets->Scripts** and double click on the **OnCollisionEvent** file to open it in Visual Studio. You will see some variables you to need to update: **server**, **username** and **password**. In server, you need to input your HIAS Server URL. In username, you need to add you iotJumpWay device public key. For password you need to add your private key.
 
 &nbsp;
 

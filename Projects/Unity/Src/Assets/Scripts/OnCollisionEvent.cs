@@ -9,8 +9,11 @@ using SimpleJSON;
 
 public class OnCollisionEvent : MonoBehaviour
 {
-    public static string server = "https://genisysai.iotjumpway.com";
+    public static string server = "";
     public static string serverPath = server + "/Detection/ALL/CNN/API/Inference";
+
+    private string username = "";
+    private string password = "";
 
     public string image;
     public string imageName;
@@ -64,7 +67,7 @@ public class OnCollisionEvent : MonoBehaviour
 
         culprit = contact.otherCollider;
         current = contact.thisCollider;
-            print("Collision With " + current.name + " (Tag: " + current.tag + ") From " + culprit.name);
+        print("Collision With " + current.name + " (Tag: " + current.tag + ") From " + culprit.name);
 
 
         if (current.name == "reset")
@@ -96,6 +99,13 @@ public class OnCollisionEvent : MonoBehaviour
             string contentType = String.Concat("multipart/form-data; boundary=", Encoding.UTF8.GetString(boundary));
 
             UnityWebRequest wr = new UnityWebRequest(serverPath, "POST");
+
+            string base64 = Convert.ToBase64String(
+                Encoding.GetEncoding("UTF-8").GetBytes(username + ":" + password)
+            );
+
+            wr.SetRequestHeader("Authorization", "Basic " + base64);
+
             UploadHandler uploader = new UploadHandlerRaw(body);
             uploader.contentType = contentType;
 
